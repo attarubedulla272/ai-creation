@@ -1,0 +1,30 @@
+[
+  {
+    "source_language": "en",
+    "target_language": "hi",
+    "source_text": "The meeting starts at ten.",
+    "reference_text": "बैठक दस बजे शुरू होती है।",
+    "reference_status": "provisional_project_reference"
+  },
+  {
+    "source_language": "hi",
+    "target_language": "en",
+    "source_text": "बैठक दस बजे शुरू होती है।",
+    "reference_text": "The meeting starts at ten.",
+    "reference_status": "provisional_project_reference"
+  },
+  {
+    "source_language": "en",
+    "target_language": "te",
+    "source_text": "The meeting starts at ten.",
+    "reference_text": "సమావేశం పది గంటలకు ప్రారంభమవుతుంది.",
+    "reference_status": "provisional_project_reference"
+  },
+  {
+    "source_language": "te",
+    "target_language": "en",
+    "source_text": "సమావేశం పది గంటలకు ప్రారంభమవుతుంది.",
+    "reference_text": "The meeting starts at ten.",
+    "reference_status": "provisional_project_reference"
+  }
+]

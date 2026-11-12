@@ -1,0 +1,12 @@
+[project]
+name = "ai-creator-studio-mlx-audio-worker"
+version = "0.1.0"
+description = "Isolated Apple Silicon transcription worker for AI Creator Studio"
+requires-python = ">=3.10"
+dependencies = [
+    "mlx-audio-plus[stt]==0.1.8; sys_platform == 'darwin' and platform_machine == 'arm64'",
+]
+
+[tool.uv]
+package = false
+exclude-dependencies = ["mlx-audio"]

@@ -1,0 +1,83 @@
+{
+  "suite": "indictrans2_en_to_indic_smoke_test_v1",
+  "description": "Synthetic English source sentences for genuine IndicTrans2 inference. This file contains no reference translations; inspect model outputs and have a fluent speaker review them before marking a language supported.",
+  "source_language": "eng_Latn",
+  "targets": [
+    {"code": "tel_Telu", "language": "Telugu"},
+    {"code": "hin_Deva", "language": "Hindi"},
+    {"code": "tam_Taml", "language": "Tamil"},
+    {"code": "kan_Knda", "language": "Kannada"},
+    {"code": "mal_Mlym", "language": "Malayalam"}
+  ],
+  "samples": [
+    {
+      "id": "basic_greeting",
+      "text": "Good morning. How are you today?",
+      "checks": [
+        "Greeting and question are both preserved",
+        "Natural everyday phrasing",
+        "Question mark or equivalent punctuation is retained"
+      ]
+    },
+    {
+      "id": "appointment_time",
+      "text": "Your appointment is scheduled for Monday at 10:30 AM.",
+      "checks": [
+        "Monday is preserved",
+        "10:30 AM is preserved accurately",
+        "The sentence remains an appointment notification"
+      ]
+    },
+    {
+      "id": "numeric_measurement",
+      "text": "The package contains 3 books and 2 notebooks, and it weighs 1.5 kilograms.",
+      "checks": [
+        "All quantities are preserved: 3, 2, and 1.5",
+        "The units and item types are not confused"
+      ]
+    },
+    {
+      "id": "negation_and_condition",
+      "text": "Do not restart the computer until the update is complete.",
+      "checks": [
+        "The negative instruction is preserved",
+        "The condition and order are preserved",
+        "The output does not accidentally instruct the user to restart now"
+      ]
+    },
+    {
+      "id": "proper_noun_and_acronym",
+      "text": "Ravi uploaded the PDF report to the AI Creator Studio project.",
+      "checks": [
+        "The name Ravi is preserved or transliterated consistently",
+        "PDF and AI are handled appropriately",
+        "The project name remains identifiable"
+      ]
+    },
+    {
+      "id": "short_paragraph",
+      "text": "Please review the video before publishing it. Check the subtitles, audio levels, and spelling. If you find an error, save the project and tell the editor what needs to be fixed.",
+      "checks": [
+        "All three review items are preserved: subtitles, audio levels, spelling",
+        "The conditional instruction is preserved",
+        "The save-project and notify-editor actions are both preserved"
+      ]
+    }
+  ],
+  "execution_expectations": {
+    "case_count": 30,
+    "must_use_real_model": true,
+    "mock_or_fallback_output_allowed": false,
+    "record_per_case": [
+      "sample_id",
+      "target_language",
+      "input_text",
+      "output_text",
+      "elapsed_ms",
+      "success_or_error",
+      "model_revision",
+      "device_or_backend"
+    ],
+    "language_status_rule": "Do not mark a language supported based only on a successful HTTP response. Require non-empty real model output, no mock/fallback path, preserved meaning in the checks above, and fluent-speaker review."
+  }
+}
